@@ -1,0 +1,261 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f6f7fc;
+  color: #20213b;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 6%;
+  background: white;
+  box-shadow: 0 2px 12px #0000000d;
+}
+
+.brand {
+  font-size: 23px;
+  font-weight: bold;
+  color: #6551db;
+  text-decoration: none;
+}
+
+.navbar nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.navbar nav a {
+  color: #444;
+  text-decoration: none;
+}
+
+button,
+.primary-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 9px;
+  background: #6854e8;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #eeecff, #ffffff);
+}
+
+.hero h1 {
+  font-size: clamp(36px, 6vw, 65px);
+}
+
+.hero h1 span {
+  display: block;
+  color: #6854e8;
+}
+
+.hero > p,
+.info-section > p {
+  max-width: 650px;
+  margin: 20px auto;
+  line-height: 1.8;
+  color: #70758a;
+}
+
+.hero-stats,
+.steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.hero-stats div,
+.steps article {
+  padding: 20px;
+  border-radius: 12px;
+  background: white;
+}
+
+.hero-stats span {
+  display: block;
+  margin-top: 8px;
+}
+
+.detector-section,
+.info-section {
+  padding: 65px 20px;
+  text-align: center;
+}
+
+.detector-section {
+  background: #f0efff;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.detector-card {
+  max-width: 750px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 18px;
+  background: white;
+}
+
+.upload-box {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px dashed #aaa0f5;
+  border-radius: 14px;
+  cursor: pointer;
+}
+
+.upload-box input {
+  display: none;
+}
+
+.upload-icon {
+  font-size: 40px;
+}
+
+.upload-box p,
+.file-info {
+  color: #777;
+}
+
+.file-types {
+  font-size: 12px;
+  color: #6854e8;
+}
+
+.media-preview {
+  display: block;
+  max-width: 100%;
+  max-height: 350px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.detect-btn {
+  margin: 15px;
+}
+
+.progress-track {
+  height: 8px;
+  background: #ddd8ff;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 50%;
+  background: #6854e8;
+  animation: loading 1s infinite alternate;
+}
+
+@keyframes loading {
+  from { transform: translateX(0); }
+  to { transform: translateX(100%); }
+}
+
+.error-message {
+  margin-top: 20px;
+  padding: 15px;
+  color: #b42335;
+  background: #fff0f0;
+  border-radius: 8px;
+}
+
+.result-card {
+  margin-top: 25px;
+  padding: 20px;
+  background: #f4f2ff;
+  border-radius: 12px;
+  overflow-wrap: anywhere;
+}
+
+.result-card pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #211b4b;
+  color: white;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #171333;
+  color: white;
+}
+
+.dark {
+  background: #141528;
+  color: white;
+}
+
+.dark .navbar,
+.dark .detector-card,
+.dark .steps article,
+.dark .hero-stats div {
+  background: #24253d;
+  color: white;
+}
+
+.dark .navbar nav a {
+  color: white;
+}
+
+.dark .hero,
+.dark .detector-section,
+.dark .info-section {
+  background: #191a30;
+  color: white;
+}
+
+.dark .upload-box {
+  background: #24253d;
+}
+
+.dark .result-card {
+  background: #292644;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar nav {
+    justify-content: center;
+  }
+
+  .detector-card {
+    padding: 15px;
+  }
+}
